@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://naniexplains.netlify.app/", // replace this with your deployed domain
   author: "Durga Prasad",
-  desc: "Programming Topics in Plain English",
+  desc: "Computer Science Simplified",
   title: "NaniExplains",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "naniexplains-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
@@ -18,7 +18,7 @@ export const LOCALE = {
 
 export const LOGO_IMAGE = {
   enable: false,
-  svg: true,
+  svg: false,
   width: 216,
   height: 46,
 };
