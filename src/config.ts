@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "NaniExplains",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -17,7 +17,7 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: true,
+  enable: false,
   svg: true,
   width: 216,
   height: 46,
