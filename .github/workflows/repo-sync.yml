@@ -25,6 +25,7 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v1.1.8
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           source_repo_path: ${{ env.SOURCE_REPOSITORY }}
           upstream_branch: ${{ env.SOURCE_BRANCH }}
           pr_title: "[actions-template-sync] Upstream template update"
