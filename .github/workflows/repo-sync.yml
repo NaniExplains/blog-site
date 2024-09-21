@@ -10,7 +10,7 @@ on:
 
 env:
   SOURCE_BRANCH: main
-  SOURCE_REPOSITORY: https://github.com/satnaing/astro-paper
+  SOURCE_REPOSITORY: satnaing/astro-paper
 
 jobs:
   repo-sync:
