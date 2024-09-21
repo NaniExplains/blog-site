@@ -1,0 +1,31 @@
+name: repo-sync
+
+# Doc: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+
+on:
+  schedule:
+    - cron:  "0 1 * * MON"
+  # Allow this workflow to be manually triggered
+  workflow_dispatch:
+
+env:
+  SOURCE_BRANCH: main
+  SOURCE_REPOSITORY: https://github.com/satnaing/astro-paper
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Doc: https://github.com/marketplace/actions/checkout
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
+
+      # Doc: https://github.com/marketplace/actions/actions-template-sync
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v1.1.8
+        with:
+          source_repo_path: ${{ env.SOURCE_REPOSITORY }}
+          upstream_branch: ${{ env.SOURCE_BRANCH }}
+          pr_title: "[actions-template-sync] Upstream template update"
+          pr_commit_msg: "chore(template): upstream template update"
