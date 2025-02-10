@@ -1,14 +1,22 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://naniexplains.netlify.app/", // replace this with your deployed domain
-  author: "Durga Prasad",
-  desc: "Computer Science Simplified",
-  title: "NaniExplains",
-  ogImage: "naniexplains-og.jpg",
+  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  author: "Sat Naing",
+  profile: "https://satnaing.dev/",
+  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  title: "AstroPaper",
+  ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 5,
+  postPerIndex: 4,
+  postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  showArchives: true,
+  editPost: {
+    url: "https://github.com/satnaing/astro-paper/edit/main/src/content/blog",
+    text: "Suggest Changes",
+    appendFilePath: true,
+  },
 };
 
 export const LOCALE = {
@@ -18,7 +26,7 @@ export const LOCALE = {
 
 export const LOGO_IMAGE = {
   enable: false,
-  svg: false,
+  svg: true,
   width: 216,
   height: 46,
 };
@@ -26,7 +34,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/NaniExplains",
+    href: "https://github.com/satnaing/astro-paper",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
@@ -34,17 +42,17 @@ export const SOCIALS: SocialObjects = [
     name: "Facebook",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Facebook`,
-    active: false,
+    active: true,
   },
   {
     name: "Instagram",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Instagram`,
-    active: false,
+    active: true,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/company/naniexplains",
+    href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
@@ -55,9 +63,9 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
   {
-    name: "Twitter",
+    name: "X",
     href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitter`,
+    linkTitle: `${SITE.title} on X`,
     active: false,
   },
   {
@@ -68,7 +76,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@NaniExplains",
+    href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on YouTube`,
     active: false,
   },
